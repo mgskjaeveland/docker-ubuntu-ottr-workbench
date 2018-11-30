@@ -1,5 +1,7 @@
 FROM ubuntu:16.04
 
+SHELL ["/bin/bash", "-c"]
+
 RUN apt-get update -qy && apt-get install -qy \
     make \
     git \
@@ -21,14 +23,11 @@ ENV JAVA_ARGS ""
 
 RUN update-ca-certificates --fresh
 
+RUN cd /tmp && \
+    wget http://dl.bintray.com/groovy/maven/groovy-binary-2.4.0-beta-4.zip && \
+    unzip groovy-binary-2.4.0-beta-4.zip && \
+    mv groovy-2.4.0-beta-4 /groovy && \
+    rm groovy-binary-2.4.0-beta-4.zip
 
-ENV SDKMAN_DIR=/root/.sdkman
-
-RUN curl -s get.sdkman.io | bash
-RUN ["/bin/bash", "-c", "source $SDKMAN_DIR/bin/sdkman-init.sh"]
-
-RUN echo "sdkman_auto_answer=true" > $SDKMAN_DIR/etc/config && \
-    echo "sdkman_auto_selfupdate=false" >> $SDKMAN_DIR/etc/config && \
-    echo "sdkman_insecure_ssl=true" >> $SDKMAN_DIR/etc/config
-
-RUN ["/bin/bash", "-c", "-l", "sdk install groovy"]
+ENV GROOVY_HOME /groovy
+ENV PATH $GROOVY_HOME/bin/:$PATH
