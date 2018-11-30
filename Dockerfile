@@ -23,4 +23,4 @@ RUN update-ca-certificates --fresh
 
 RUN curl -s get.sdkman.io | bash
 RUN source "$HOME/.sdkman/bin/sdkman-init.sh"
-sdk install groovy
+RUN sdk install groovy
