@@ -5,10 +5,11 @@ RUN apt-get update -qy && apt-get install -qy \
     git \
     openssh-client \
     wget \
+    zip \
+    org-mode \
     graphviz \
     plantuml \
     raptor-utils \
-    zip \
     openjdk-8-jre-headless \
     groovy \
     python
