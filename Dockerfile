@@ -22,5 +22,5 @@ ENV JAVA_ARGS ""
 RUN update-ca-certificates --fresh
 
 RUN curl -s get.sdkman.io | bash
-RUN source "$HOME/.sdkman/bin/sdkman-init.sh"
+RUN . "$HOME/.sdkman/bin/sdkman-init.sh"
 RUN sdk install groovy
