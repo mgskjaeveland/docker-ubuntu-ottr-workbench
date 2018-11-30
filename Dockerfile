@@ -1,5 +1,7 @@
 FROM ubuntu:16.04
 
+SHELL ["/bin/bash", "-c"]
+
 RUN apt-get update -qy && apt-get install -qy \
     make \
     git \
@@ -21,6 +23,7 @@ ENV JAVA_ARGS ""
 
 RUN update-ca-certificates --fresh
 
+
 RUN curl -s get.sdkman.io | bash
-RUN . "$HOME/.sdkman/bin/sdkman-init.sh"
+RUN source "$HOME/.sdkman/bin/sdkman-init.sh"
 RUN sdk install groovy
