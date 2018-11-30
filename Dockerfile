@@ -7,15 +7,10 @@ RUN apt-get update -qy && apt-get install -qy \
     wget \
     graphviz \
     plantuml \
-    raptor-utils
-
-RUN apt-get update -qy && apt-get install -qy \
-    openjdk-8-jre-headless
-
-RUN apt-get update -qy && apt-get install -qy \
-    groovy
-
-RUN apt-get update -qy && apt-get install -qy \
+    raptor-utils \
+    zip \
+    openjdk-8-jre-headless \
+    groovy \
     python
 
 
