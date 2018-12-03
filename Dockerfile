@@ -24,10 +24,13 @@ ENV JAVA_ARGS ""
 RUN update-ca-certificates --fresh
 
 RUN cd /tmp && \
-    wget http://dl.bintray.com/groovy/maven/groovy-binary-2.4.0-beta-4.zip && \
-    unzip groovy-binary-2.4.0-beta-4.zip && \
-    mv groovy-2.4.0-beta-4 /groovy && \
-    rm groovy-binary-2.4.0-beta-4.zip
+    wget http://dl.bintray.com/groovy/maven/apache-groovy-binary-2.5.4.zip && \
+    unzip apache-groovy-binary-2.5.4.zip && \
+    mv groovy-2.5.4 /groovy && \
+    rm apache-groovy-binary-2.5.4.zip
 
 ENV GROOVY_HOME /groovy
 ENV PATH $GROOVY_HOME/bin/:$PATH
+
+RUN groovy -version
+
