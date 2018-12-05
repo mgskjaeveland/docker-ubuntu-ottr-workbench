@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
 RUN apt-get update -qy \
-    && apt-get install --no-install-recommends -qy \
+    && apt-get install -qy \
     make \
     git \
     openssh-client \
@@ -10,6 +10,7 @@ RUN apt-get update -qy \
     zip \
     unzip \
     org-mode \
+    emacs-goodies-el \
     graphviz \
     plantuml \
     raptor-utils \
