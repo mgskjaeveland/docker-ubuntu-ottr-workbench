@@ -14,7 +14,7 @@ RUN apt-get update -qy \
     graphviz \
     plantuml \
     raptor-utils \
-    openjdk-8-jdk-headless \
+    openjdk-9-jdk-headless \
     python
 
 # Install maven 3.3.9
