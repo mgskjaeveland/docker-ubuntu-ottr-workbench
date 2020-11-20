@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM openjdk:11-alpine
 
 RUN apt-get update -qy \
     && apt-get install -qy \
@@ -14,7 +14,6 @@ RUN apt-get update -qy \
     graphviz \
     plantuml \
     raptor-utils \
-    openjdk:11 \
     python
 
 # Install maven 3.3.9
