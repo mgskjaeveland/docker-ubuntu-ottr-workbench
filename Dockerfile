@@ -1,4 +1,4 @@
-FROM openjdk:11
+FROM ubuntu:18.04
 
 RUN apt-get update -qy \
     && apt-get install -qy \
@@ -14,6 +14,7 @@ RUN apt-get update -qy \
     graphviz \
     plantuml \
     raptor2-utils \
+    default-jdk \
     python
 
 # Install maven 3.3.9
