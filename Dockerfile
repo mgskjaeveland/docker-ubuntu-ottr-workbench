@@ -13,7 +13,7 @@ RUN apt-get update -qy \
     emacs-goodies-el \
     graphviz \
     plantuml \
-    raptor-utils \
+    raptor2-utils \
     python
 
 # Install maven 3.3.9
