@@ -1,4 +1,4 @@
-FROM openjdk:12-alpine
+FROM openjdk:11
 
 RUN apt-get update -qy \
     && apt-get install -qy \
