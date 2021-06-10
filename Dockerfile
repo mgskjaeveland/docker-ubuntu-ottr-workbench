@@ -13,6 +13,7 @@ RUN apt-get update -qy \
     emacs-goodies-el \
     graphviz \
     plantuml \
+    xsltproc \
     raptor2-utils \
     default-jdk \
     python
